@@ -13,11 +13,12 @@ import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ClickMeComponent } from './click-me/click-me.component';
 import { ContactsModule } from './modules/contacts/contacts.module';
 import { AppRoutingModule } from './/app-routing.module';
+import { SkillsComponent } from './skills/skills.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-
+    SkillsComponent,
     GreetingComponent,
     ContactFormComponent,
     ClickMeComponent

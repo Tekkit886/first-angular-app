@@ -6,7 +6,7 @@ import { ContactsComponent } from '../../contacts/contacts.component';
   imports: [
     CommonModule
   ],
-  declarations: [ContactsModule],
-  exports: [ContactsModule]
+  declarations: [],
+
 })
 export class ContactsModule { }
