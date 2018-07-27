@@ -15,6 +15,10 @@ export class DisplayMoviesComponent implements OnInit {
 
   constructor(private http: HttpClient) { }
 
+  ngOnInit() {
+    this.getMovies();
+  }
+
 	getMovies() {
 		this.http.get<Movie[]>(this.moviesRoute).subscribe(movies => {
 			this.movies = movies;
@@ -22,8 +26,14 @@ export class DisplayMoviesComponent implements OnInit {
 		});
   }
 
-  ngOnInit() {
-    this.getMovies();
+  onMovieDeleted(movieId) {
+    let movieIndex = 0;
+    for(let movie of this.movies) {
+      if(movie.id === movieId) {
+        this.movies.splice(movieIndex, 1);
+        break;
+      }
+      movieIndex++;
+    }
   }
-
 }
