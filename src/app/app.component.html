@@ -1,0 +1,23 @@
+<div id="header">
+    <nav>
+        <a class="btn" routerLink="greeting" routerLinkActive="active">Home</a>
+        <a class="btn" routerLink="skills" routerLinkActive="active">Skills</a>
+        <a class="btn" routerLink="contact" routerLinkActive="active">Contact</a>
+      </nav>
+
+        <h1>
+          Welcome to {{ title }}!
+        </h1>
+        <h2>
+          Current Location {{ city }}
+        </h2>
+        <h2>
+          {{ tag }}
+        </h2>
+        <p>
+          {{ about }}
+        </p>
+  </div>
+  <router-outlet></router-outlet>
+
+
